@@ -1,0 +1,273 @@
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(35, 29, 35, 0.874);
+    overflow: hidden;
+    font-family: 'Cinzel', serif;
+    transition: background-color 1s;
+}
+
+.menu{
+   text-align: center;
+   transition: opacity 1s;
+}
+
+.title{
+    color: rgb(176, 34, 34);
+    font-size: 70px;
+    letter-spacing: 10px;
+    text-shadow: 0px 0px 50px rgb(255, 0, 0),
+                 0px 0px 50px rgb(0, 0, 0);
+    animation: float 3s ease-in-out infinite;
+}
+
+.start{
+    margin-top: 30px;
+    padding: 20px 60px;
+    background: transparent;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
+    color: brown;
+    font-size: 20px;
+    font-family: 'Cinzel', serif;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.start:hover{
+    background: rgb(179, 26, 26);
+    color: rgb(0, 0, 0);
+    letter-spacing: 2px;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.game-container{
+    display: none;
+    width: 600px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s;
+}
+
+.paper-section{
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 2px solid rgb(94, 16, 16);
+}
+
+.paper-image{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    background-color: rgb(70, 13, 2);
+}
+
+.dialog{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    color: brown;
+    background-color: rgb(0, 0, 0);
+}
+
+.choice-section {
+  margin-top: 20px;
+
+  padding: 20px;
+
+  text-align: center;
+
+  background: #1b1b1b;
+
+  border: 2px solid #555;
+}
+
+.action {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background: #780909;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+  border-radius: 5px;
+}
+
+.action:hover {
+  background: #000000;
+  color:#780909;
+}
+
+.instruction {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 30px;
+  text-align: center;
+  color: #ff000080;
+}
+
+.dialog{
+
+}
+
+.instruction{
+  opacity: 0;
+}
+
+.action{
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+}
+
+.action.show{
+ pointer-events: auto;
+}
+
+.show{
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease;
+}
+
+.dev-panel{
+    position:fixed;
+    top:20px;
+    right:20px;
+    width:220px;
+    background:#111;
+    border:2px solid brown;
+    padding:15px;
+    z-index:9999;
+}
+
+.dev-panel h3{
+    color:brown;
+    margin-top:0;
+    text-align:center;
+}
+
+.scene-input{
+    width:100%;
+    box-sizing:border-box;
+    padding:8px;
+    margin-bottom:10px;
+    background:black;
+    color:white;
+    border:1px solid brown;
+}
+
+.jump-btn{
+    width:100%;
+    padding:8px;
+    background:brown;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+.name-input{
+  padding:10px;
+  margin-right:10px;
+  background:black;
+  border:1px solid brown;
+  color:white;
+  font-size:16px;
+}
+
+.ending-screen{
+
+  height:100vh;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  color:red;
+
+  text-align:center;
+}
+
+.restart{
+  padding: 10px 20px;
+  margin: 0 10px;
+  background: #780909;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+  border-radius: 5px;
+}
+
+.restart:hover {
+  background: #000000;
+  color:#780909;
+}
+
+.rickroll-gif{
+  width:500px;
+  display:block;
+  margin:auto;
+  opacity:0;
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.heart{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin:15px 0;
+  display:none;
+}
+
+.heartIcon{
+  width: 40px;
+  height: 40px;
+}
+
+.flash-red{
+    animation:redFlash .4s;
+}
+
+@keyframes redFlash{
+
+    0%{
+        background:black;
+    }
+
+    50%{
+        background:#8b0000;
+    }
+
+    100%{
+        background:black;
+    }
+
+}
